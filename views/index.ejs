@@ -21,12 +21,13 @@
         <p>O melhor gerenciador de veterinário</p>
       </section>
       <div class="line"></div>
-      <form action="/agenda">
+      <form action="/entrar" method="post" id="form">
         <h1>Login</h1>
-        <input type="text" placeholder="Login" />
-        <input type="password" placeholder="Senha" />
+        <input type="text" placeholder="Login" id="userInput" name="user" />
+        <input type="password" placeholder="Senha" id="passwordInput" name="password" />
         <button>Entrar</button>
       </form>
     </main>
+    <script src="/js/login.js"></script>
   </body>
 </html>

@@ -8,6 +8,7 @@ const financeiroController = require("./src/controllers/financeiroController");
 const relatorioController = require("./src/controllers/relatorioController");
 
 router.get("/", petController.index);
+router.post("/", petController.entrar)
 router.get("/agenda", agendaController.agenda);
 router.post("/agenda", agendaController.criar);
 router.get("/lista-pets", listapetController.index);
