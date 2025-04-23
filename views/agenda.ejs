@@ -80,7 +80,7 @@
               <div class="pet-info">
                 <!-- imagem não funciona por motivos que desconheço -->
                 <img
-                  src="/assets/images/<%= appointment.petTipo %>.png"
+                src="/assets/images/<%= agendamentos.petTipo === 'cachorro' ? 'dog.png' : 'cat.png' %>"
                   alt="<%= appointment.petTipo %>"
                 />
                 <h2><%= appointment.petNome %> (<%= appointment.raca %>)</h2>

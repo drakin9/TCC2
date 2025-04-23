@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const especies = document.querySelectorAll(".especie");
   const petRaca = document.getElementById("petRaca");
   const telefone = document.getElementById("telefone");
+  let petTipo = "";
 
   let especieSelected = "";
 
@@ -130,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   formAddPet.addEventListener("submit", async function (e) {
     e.preventDefault();
-
+    console.log(especies.especieSelected);
     const data = {
       tutorNome: document.getElementById("tutorNome").value,
       cpf: document.getElementById("cpf").value,
@@ -139,6 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
       petNome: document.getElementById("petNome").value,
       petAnoNascimento: document.getElementById("petAnoNascimento").value,
       petRaca: petRaca.value,
+      petTipo: especies.especieSelected,
       petAlergias: document.getElementById("alergiasPet").value,
       petVacinas: document.getElementById("petVacinas").value,
       tipoConsulta: document.getElementById("tipoConsulta").value,
