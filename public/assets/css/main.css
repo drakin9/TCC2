@@ -48,8 +48,6 @@ body{
 .main2 main{
     display: flex;
     flex-direction: column;
-    border-top: 1px solid black;
-    border-left: 1px solid black;
 }
 
 header.top-bar{

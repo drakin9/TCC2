@@ -11,15 +11,16 @@ mongoose
   .catch((err) => console.error("Erro ao conectar no MongoDB:", err));
 
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.json()); //arquivos json
+app.use(express.static(path.join(__dirname, "public")));//caminho absoluto
 
 //paginas onde os ejs(views) estão e vão ser renderizados
 app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "ejs");
+app.set("view engine", "ejs"); // renderiza as views como ejs
 
 app.use("/", routes); //rotas ae
 
+//servidors
 app.listen(3000, () => {
   console.log("Acessar http://localhost:3000");
 });
